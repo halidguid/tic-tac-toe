@@ -1,0 +1,18 @@
+body,
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  margin-left: 50px;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+}
+
+.new-game {
+  margin-top: 0px;
+  margin-bottom: 15px;
+  margin-left: 40px;
+  margin-bottom: 25px;
+}
