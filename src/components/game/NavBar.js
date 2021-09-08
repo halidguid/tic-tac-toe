@@ -4,10 +4,11 @@ const styles = {
   width: "350px",
 };
 
-const NavBar = ({ name1, name2, firstCounter, secondCounter }) => {
+const NavBar = ({ name1, name2, firstCounter, secondCounter, drawCounter }) => {
   return (
     <div className="navbar" style={styles}>
-      TicTacToe | {name1}:{firstCounter} vs {name2}:{secondCounter}
+      TicTacToe | {name1}:{firstCounter} vs {name2}:{secondCounter}|Ties:
+      {drawCounter}
     </div>
   );
 };

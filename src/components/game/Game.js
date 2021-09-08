@@ -8,7 +8,6 @@ import History from "./History";
 const pStyle = {
   margin: "15px",
   fontSize: "1.5rem",
-  
 };
 
 const endStyle = {
@@ -20,7 +19,6 @@ const endStyle = {
   width: "290px",
   height: "110px",
   backgroundColor: "lightblue",
-  
 };
 
 const Game = ({ name1, name2, setLogged, id, setId }) => {
@@ -31,6 +29,7 @@ const Game = ({ name1, name2, setLogged, id, setId }) => {
   const [firstCounter, setFirstCounter] = useState(0);
   const [secondCounter, setSecondCounter] = useState(0);
   const [history, setHistory] = useState([]);
+  const [drawCounter, setDrawCounter] = useState(0);
 
   const clickHandler = (i) => {
     const copyBoard = [...board];
@@ -79,6 +78,7 @@ const Game = ({ name1, name2, setLogged, id, setId }) => {
       board[9] !== null
     ) {
       setDraw(true);
+      setDrawCounter(drawCounter + 1);
 
       let trenutno = new Date();
       let datum =
@@ -200,6 +200,7 @@ const Game = ({ name1, name2, setLogged, id, setId }) => {
             name2={name2}
             firstCounter={firstCounter}
             secondCounter={secondCounter}
+            drawCounter={drawCounter}
           />
           <p style={pStyle}>
             {xIsNext ? name1 + "'s turn!" : name2 + "'s turn!"}
